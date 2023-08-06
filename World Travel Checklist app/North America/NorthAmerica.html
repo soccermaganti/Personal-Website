@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Simple Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: lightblue;
+        }
+        /* This creates a cool css header using linear gradients */
+    
+        h1 {
+            font-size: 70px;
+            font-weight: 700;
+            color: #3f3f3f;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Using a psuedo element ::before, it creates a gradient background
+         */
+        h1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /*background-image: linear-gradient(to left, #a382ff, #e88787);*/
+            opacity: 0.7;
+            z-index: -1;
+        }
+        
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            color: #0b0a0a;
+            text-align: center;
+            text-transform: none;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h3 {
+            text-align: left;
+            font-size: 30;
+        }
+
+        strong {
+            font-size: 45;
+        }
+
+        ul {
+            list-style-type: disc;
+            color: #666;
+        }
+        /* This creates space between ordered list, currently set 
+        to 20 pixels */
+        /* o1 is just ordered list where as listStyle1 is a class
+        variant where it creates a bullet point instead of number*/
+        ol {
+            margin-bottom: 20px;
+        }
+        .listStyle1 {
+            list-style-type: circle;
+        }
+        .listStyle2 {
+            list-style-type: square;
+        }
+
+
+        p {
+            margin-top: 5px;
+            color: black;
+            font-size: 20;
+        }
+        .monkey {
+            margin-top: 20px;
+        }
+        
+
+        
+        img {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .image1 {
+            position: absolute;
+            top: 60%; /* Specify the unit (e.g., pixels) for top */
+            bottom: 0%; /* Specify the unit (e.g., pixels) for bottom */
+            right: 0%; /* Specify the unit (e.g., pixels) for right */
+            left: 50%; /* Specify the unit (e.g., pixels) for left */
+        }
+        .image2 {
+            width:300px;
+            height:300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>North America</h1>
+    <h2><a href="/Home Page/home.html">Go back to Home Page</a></h2>
+    <!--Creating space using margin classes-->
+    <p class = "monkey"></p>
+    <!--Using ol is ordered list and can create lists within lists-->
+    <ol>
+        <o1>
+            <li>
+                <strong>United States of America</strong>
+                <p> Lived in Connecticut my whole life. Plainville -> Plantsville -> Shelton -> Farmington</p>
+                <h3>States Traveled:</h3>
+                <ol id = "statesList">
+                    <!-- This is how you add images to front end and size it and using css classes to style differently */-->
+                    <!--<img src="us-regions-map-census.webp" alt = "US Regions Map" width="200px" height="150px" class="image1" > -->
+                    <ol>
+                        <li>
+                            <strong>Northeast</strong>
+                            <!--Using List classes to create bullet points instead of numbers-->
+                            <ol class = "listStyle2">
+                                <!--Using <br>&#10004 is how you create a checkmark and removing <br> makes it on the same line-->
+                                <li>Connecticut &#10004</li>
+                                <li>Maine</li>
+                                <li>Massachusetts &#10004</li>
+                                <li>New Hampshire</li>
+                                <li>Rhode Island &#10004</li>
+                                <li>Vermont &#10004</li>
+                                <li>New Jersey &#10004</li>
+                                <li>New York &#10004</li>
+                                <li>Pennsylvania &#10004</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <strong>Midwest</strong>
+                            <ol class = "listStyle2">
+                                <li>Illinois</li>
+                                <li>Indiana</li>
+                                <li>Michigan</li>
+                                <li>Ohio</li>
+                                <li>Wisconsin</li>
+                                <li>Iowa</li>
+                                <li>Kansas</li>
+                                <li>Minnesota</li>
+                                <li>Missouri</li>
+                                <li>Nebraska</li>
+                                <li>North Dakota</li>
+                                <li>South Dakota</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <strong>South</strong>
+                            <ol class = "listStyle2">
+                                <li>Delaware &#10004</li>
+                                <li>Florida &#10004</li>
+                                <li>Georgia &#10004</li>
+                                <li>Maryland &#10004</li>
+                                <li>North Carolina</li>
+                                <li>South Carolina &#10004</li>
+                                <li>Virginia &#10004</li>
+                                <li>Washington, D.C. &#10004</li>
+                                <li>West Virginia &#10004</li>
+                                <li>Alabama</li>
+                                <li>Kentucky</li>
+                                <li>Mississippi</li>
+                                <li>Tennessee</li>
+                                <li>Arkansas</li>
+                                <li>Louisiana</li>
+                                <li>Oklahoma</li>
+                                <li>Texas &#10004</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <strong>West</strong>
+                            <ol class = "listStyle2">
+                                <li>Arizona</li>
+                                <li>Colorado</li>
+                                <li>Idaho</li>
+                                <li>Montana</li>
+                                <li>Nevada</li>
+                                <li>New Mexico</li>
+                                <li>Utah</li>
+                                <li>Wyoming</li>
+                                <li>Alaska</li>
+                                <li>California &#10004</li>
+                                <li>Hawaii</li>
+                                <li>Oregon</li>
+                                <li>Washington</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </ol>
+            </li>
+            <!--Pretty cool way to checking number of states visited by
+            checking if the unicode a checkmark is there-->
+            <p>Number of states visited: <span id="count">0</span></p>
+
+            <script src="script.js"></script>
+            <li>
+                <strong>Mexico</strong>
+                <p>Description for Term 2</p>
+            </li>
+            <li>
+                <strong>Canada</strong>
+                <p>Description for Term 3</p>
+            </li>
+            <li>
+                <strong>Saint Kitts and Nevis</strong>
+                <p>Description</p>
+            </li>
+        </o1>
+    </ol>
+    <a href="/Home Page/home.html">Go back to Home Page</a>
+</body>
+</html>
+
